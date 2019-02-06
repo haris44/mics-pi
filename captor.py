@@ -13,12 +13,12 @@ GPIO.setup(Trig, GPIO.IN)
 
 
 def take():
-    total = 0
+    total = 100
     nb = 0
 
     while nb < nbPrise:
         time.sleep(0.1)
-        total = total + GPIO.input(Trig)
+        total = total - GPIO.input(Trig)
         nb = nb + 1
     return total
 
