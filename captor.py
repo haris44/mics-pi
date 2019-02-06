@@ -17,7 +17,7 @@ def take():
     nb = 0
 
     while nb < nbPrise:
-        time.sleep(0.5)
+        time.sleep(0.1)
         total = total + GPIO.input(Trig)
         nb = nb + 1
     return total
