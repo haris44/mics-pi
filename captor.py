@@ -7,15 +7,18 @@ GPIO.setmode(GPIO.BCM)
 Trig = 17
 nbPrise = 1000
 
+
 GPIO.setup(Trig, GPIO.IN)
 
-nb = 0
+
 
 
 def take():
     total = 0
+    nb = 0
     while nb < nbPrise:
         total = total + GPIO.input(Trig)
+        nb = nb + 1
     return total
 
 
